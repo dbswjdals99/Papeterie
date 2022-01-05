@@ -1,0 +1,82 @@
+@charset "UTF-8";
+
+.login-input {
+	width: 280px;
+	height: 30px;
+	padding:25px;
+	border:none;
+	border-bottom: 1px solid silver;
+	font-size: 17px;
+	color: black;
+	outline:none;
+}
+
+input[type=submit] {
+	width: 280px;
+	height: 50px;
+	border: 1px solid black;
+	font-size: 17px;
+	background: black;
+	color: white;
+	font-size:20px;
+	font-weight:bold;
+	cursor:pointer;
+}
+
+.check-btn{
+	width: 201px;
+	height: 50px;
+	border: 1px solid black;
+	font-size: 17px;
+	background: black;
+	color: white;
+	font-size:20px;
+	font-weight:bold;
+	cursor:pointer;
+	
+}
+
+#userid_search, #pwd_search {
+	align: center;
+	display: none;
+	margin-top:40px;
+}
+
+#login_table {
+	width: 400px;
+	border-collapse: collapse;
+	padding: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align:center;
+}
+
+#login_table th, tr, td {
+	border-collapse: collapse;
+	/* padding: 10px; */
+}
+
+#userid_search_tbl, #pwd_search_tbl {
+	width: 300px;
+	border-collapse: collapse;
+	padding: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align:center;
+}
+
+#login-head{
+	font-size:26px;
+	margin-bottom:20px;
+}
+
+.login-sub-text{
+	cursor:pointer;	
+	font-size:14px;
+}
+
+.check-input{
+	border:1px solid silver;
+	padding:10px;
+	margin-bottom:10px;
+}

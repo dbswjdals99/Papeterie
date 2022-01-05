@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="kr.co.papeterie.mapper.AddressMapper">
+	<select id="list" parameterType="String" resultType="AddressVO">
+		select * from address where userid = #{_userid} order by idx desc
+	</select>
+	<insert id="add_ok" parameterType="AddressVO">
+		insert into address (addr_name, userid, rname, zip, addr1, addr2, phone, sdefault, soption)
+		values (#{addr_name}, #{userid}, #{rname}, #{zip}, #{addr1}, #{addr2}, #{phone}, #{sdefault}, #{soption})
+	</insert>
+	<select id="get_address" parameterType="Integer" resultType="AddressVO">
+		select * from address where idx = #{_idx}
+	</select>
+	<update id="clear_sdefault" parameterType="String">
+		update address set sdefault = 0 where userid = #{_userid}
+	</update>
+	<update id="update_ok" parameterType="AddressVO">
+		update address set addr_name = #{addr_name}, rname = #{rname}, zip = #{zip}, addr1 = #{addr1},
+		addr2 = #{addr2}, phone = #{phone}, sdefault = #{sdefault}, soption = #{soption} where idx = #{idx}
+	</update>
+	<delete id="del_addr" parameterType="Integer">
+		delete from address where idx = ${_idx}
+	</delete>
+	
+</mapper>

@@ -1,0 +1,174 @@
+@charset "UTF-8";
+
+/* 장바구니 버튼 영역 */
+.btn_order_box {
+	overflow: hidden;
+	padding: 30px 0 0 0;
+	text-align: right;
+}
+
+.btn_order_box .btn_left_box {
+	float: left;
+}
+
+.btn_order_box .btn_right_box {
+	float: right;
+}
+
+.btn_order_box+.chk_none {
+	display: inline-block;
+	float: right;
+}
+
+#section #page_title {
+	font-size: 25px;
+	font-weight: bold;
+}
+
+#section #page_sub {
+	float: right;
+	font-size: 15px;
+	color: #aaa;
+}
+
+#section strong {
+	color: black;
+}
+
+/* 상품 목록 */
+#cart_table {
+	clear: both;
+	width: 900px;
+	height: auto;
+	margin: auto;
+	margin-top: 30px;
+}
+
+#cart_table table {
+	margin-top: 10px;
+	border-spacing: 0px;
+	width: 900px;
+}
+
+#cart_table table th {
+	border-bottom: 1px solid #ccc;
+	border-top: 1px solid #aaa;
+	height: 30px;
+	background: #eee;
+	font-size: 13px;
+	text-align: center;
+}
+
+#cart_table table td {
+	height: 60px;
+	padding: 1px 10px;
+	border-bottom: 1px solid #ccc;
+	text-align: center;
+	font-size: 13px;
+}
+
+#cart_table #goods_img {
+	width: 36px;
+	height: 45px;
+	vertical-align: middle;
+}
+
+#cart_table #goods_id {
+	width: 280px;
+}
+
+#cart_table #goods_check {
+	width: 20px;
+}
+
+#cart_table #goods_default {
+	width: 110px;
+}
+
+#cart_table #goods_discount {
+	width: 120px;
+}
+
+#cart_table .goods_id_td {
+	text-align: left;
+}
+
+#cart_table .goods_td {
+	border-left: 1px solid #ccc;
+}
+/* 상품 총 가격 */
+#goods_total_price {
+	height: 100px;
+	width: 900px;
+	margin-top: 50px;
+	padding: 30px 20px 10px;
+	border: 1px solid gray;
+	text-align: right;
+}
+
+#goods_total_price strong {
+	font-size: 17px;
+}
+
+#price_main, #price_ship, #price_total, .price_img {
+	display: inline-block;
+	font-size: 15px;
+}
+
+#goods_total_price #price_main {
+	width: 160px;
+	height: 50px;
+}
+
+#goods_total_price #price_ship {
+	width: 80px;
+	height: 50px;
+}
+
+#goods_total_price #price_total {
+	width: 150px;
+	height: 50px;
+}
+
+#goods_total_price .price_img {
+	margin: 0px 15px;
+	margin-left:20px;
+	width: 20px;
+	height: 50px;
+}
+
+.btn-left{
+	width:150px;
+	height:40px;
+	font-size:13px;
+	font-weight:bold;
+	border:1px solid gray;
+	background:white;
+	color:gray;
+	cursor:pointer;
+	margin-right:10px;
+}
+
+.btn-right{
+	width:180px;
+	height:55px;
+	font-size:15px;
+	font-weight:bold;
+	border:1px solid gray;
+	background:white;
+	color:black;
+	cursor:pointer;
+	margin-left:10px;
+}
+
+.btn-right2{
+	width:180px;
+	height:55px;
+	font-size:15px;
+	font-weight:bold;
+	border:1px solid black;
+	background:black;
+	color:white;
+	cursor:pointer;
+	margin-left:10px;
+}

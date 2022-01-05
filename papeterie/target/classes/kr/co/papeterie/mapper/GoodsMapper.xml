@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="kr.co.papeterie.mapper.GoodsMapper">
+	<select id="goods_view" resultType="kr.co.papeterie.vo.GoodsVO">
+		select * from product where pcode=#{param1}
+	</select>
+	<select id="review_chong" resultType="Integer">
+		select ceil(count(*)/5) from review
+	</select>
+	<select id="next_review" resultType="kr.co.papeterie.vo.ReviewVO">
+		select * from review where pcode=#{param1} order by regdate desc limit #{param2}, 5
+	</select>
+	<select id="qna_chong" resultType="Integer">
+		select ceil(count(*)/5) from qna
+	</select>
+	<select id="next_qna" resultType="kr.co.papeterie.vo.QnaVO">
+		select qna.*, if(dapbun=1,'답변완료','답변대기') as dap from qna where userid!='admin' order by writeday desc limit #{parma1},5
+	</select>
+	<select id="dap_qna" resultType="kr.co.papeterie.vo.QnaVO">
+		select * from qna where userid='admin'
+	</select>
+	<select id="get_cartproduct" resultType="kr.co.papeterie.vo.GoodsVO">
+		select product.*, cart.count, product.pcode product from product, cart where product.pcode=cart.pcode 
+		and cart.userid=#{param1} and product.pcode in (${param2})
+	</select>
+	<select id="get_member" resultType="kr.co.papeterie.vo.MemberVO">
+		select * from member where userid=#{param1}
+	</select>
+	<select id="get_juso" resultType="kr.co.papeterie.vo.AddressVO">
+		select * from address where userid=#{param1} and sdefault=1
+	</select>
+	<select id="myjuso" resultType="kr.co.papeterie.vo.AddressVO">
+		select * from address where userid=#{param1}
+	</select>
+	<insert id="address_add_ok" parameterType="kr.co.papeterie.vo.AddressVO">
+		insert into address (addr_name, userid, rname, zip, addr1, addr2, phone, sdefault, soption)
+		values (#{addr_name}, #{userid}, #{rname}, #{zip}, #{addr1}, #{addr2}, #{phone}, #{sdefault}, #{soption})
+	</insert>
+	<update id="update_spoint">
+		update member set spoint=spoint+#{param1} where userid=#{param2}
+	</update>
+	<select id="address_recent_id" resultType="Integer">
+		select idx from address where userid=#{param1} order by idx desc limit 0, 1
+	</select>
+	<update id="address_update" parameterType="kr.co.papeterie.vo.AddressVO">
+		update address set addr_name=#{addr_name}, rname=#{rname}, zip=#{zip}, addr1=#{addr1}, addr2=#{addr2}, phone=#{phone}, soption=#{soption} where idx=#{idx}
+	</update>
+	<select id="make_order_code" resultType="Integer">
+		select count(distinct order_code) from porder where regdate like concat('%',#{param1},'%')
+	</select>
+	<insert id="purchase_ok" parameterType="kr.co.papeterie.vo.OrderVO">
+		insert into porder (order_code, userid, price, ship_price, addr_id, pay_type, bank, card, halbu, com, phone, state)
+		values (#{order_code}, #{userid}, #{price}, #{ship_price}, #{addr_id}, #{pay_type}, #{bank}, #{card}, #{halbu}, #{com}, #{phone}, #{state})
+	</insert>
+	<insert id="set_orderitem" parameterType="kr.co.papeterie.vo.OrderitemVO">
+		insert into orderitem (order_code, pcode, count) values (#{order_code}, #{pcode}, #{count})
+	</insert>
+	<select id="get_porder" resultType="kr.co.papeterie.vo.OrderVO">
+		select * from porder where userid=#{param1} order by order_code desc limit 0,1
+	</select>
+	<select id="get_product" resultType="kr.co.papeterie.vo.GoodsVO">
+		select product.*, orderitem.count from product, orderitem where
+		product.pcode = orderitem.pcode and order_code=#{parma1}
+	</select>  
+	<select id="all_goods" resultType="kr.co.papeterie.vo.GoodsVO">
+		select * from product order by idx desc
+	</select>
+	<select id="checkwish" resultType="Integer">
+		select count(*) from wishlist w where userid = #{_userid} and pcode = #{_pcode}
+	</select>
+	<select id="goods_all" resultType="kr.co.papeterie.vo.GoodsVO">
+		select * from product order by idx desc limit #{param1},20
+	</select>
+	<select id="goods_all_recent" resultType="kr.co.papeterie.vo.GoodsVO">
+		select * from product order by regdate desc limit #{param1},20
+	</select>
+	<select id="goods_all_rowprice" resultType="kr.co.papeterie.vo.GoodsVO">
+		select * from product order by price asc limit #{param1},20
+	</select>
+	<select id="goods_all_highprice" resultType="kr.co.papeterie.vo.GoodsVO">
+		select * from product order by price desc limit #{param1},20
+	</select>
+	<select id="goods_p01" resultType="kr.co.papeterie.vo.GoodsVO">
+		select * from product where category='p01' order by idx desc limit #{param1},20
+	</select>
+	<select id="goods_p01_recent" resultType="kr.co.papeterie.vo.GoodsVO">
+		select * from product where category='p01' order by regdate desc limit #{param1},20
+	</select>
+	<select id="goods_p01_rowprice" resultType="kr.co.papeterie.vo.GoodsVO">
+		select * from product where category='p01' order by price asc limit #{param1},20
+	</select>
+	<select id="goods_p01_highprice" resultType="kr.co.papeterie.vo.GoodsVO">
+		select * from product where category='p01' order by price desc limit #{param1},20
+	</select>
+	<select id="goods_p02" resultType="kr.co.papeterie.vo.GoodsVO">
+		select * from product where category='p02' order by idx desc limit #{param1},20
+	</select>
+	<select id="goods_p02_recent" resultType="kr.co.papeterie.vo.GoodsVO">
+		select * from product where category='p02' order by regdate desc limit #{param1},20
+	</select>
+	<select id="goods_p02_rowprice" resultType="kr.co.papeterie.vo.GoodsVO">
+		select * from product where category='p02' order by price asc limit #{param1},20
+	</select>
+	<select id="goods_p02_highprice" resultType="kr.co.papeterie.vo.GoodsVO">
+		select * from product where category='p02' order by price desc limit #{param1},20
+	</select>
+	<select id="goods_cnt" resultType="String">
+		select count(*) from product;
+	</select>
+	<select id="goods_cnt2" resultType="String">
+		select count(*) from product where category='p01';
+	</select>
+	<select id="goods_cnt3" resultType="String">
+		select count(*) from product where category='p02';
+	</select>
+	<select id="page_cnt" resultType="Integer">
+  		select ceil(count(*)/20) from product
+  	</select>
+  	<select id="page_cnt2" resultType="Integer">
+  		select ceil(count(*)/20) from product where category='p01';
+  	</select>
+  	<select id="page_cnt3" resultType="Integer">
+  		select ceil(count(*)/20) from product where category='p02';
+  	</select>
+  	<select id="main_goods" resultType="kr.co.papeterie.vo.GoodsVO">
+  		select * from product where idx=7 or idx=2 or idx=8 or idx=14
+  	</select>
+  	<select id="main_goods_new" resultType="kr.co.papeterie.vo.GoodsVO">
+  		select * from product order by regdate desc limit 8;
+  	</select>
+  	<select id="main_goods_2022" resultType="kr.co.papeterie.vo.GoodsVO">
+  		select * from product where idx=99 or idx=62 or idx=18 or idx=19 or
+  		idx=20 or idx=21 or idx=22 or idx=23;
+  	</select>
+</mapper>

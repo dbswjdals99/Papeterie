@@ -1,0 +1,131 @@
+@charset "UTF-8";
+
+#section{
+	width: 900px;
+	height: auto;
+	margin: auto;
+	margin-top: 50px;
+}
+#section strong{
+	color: black;
+}
+#section #page_title{
+	font-size: 25px;
+	font-weight: bold;
+	
+}
+#section #page_sub{
+	float: right;
+	font-size: 15px;
+	color: #aaa;
+}
+/* 영수증 상단부 */
+#receipt{
+	clear: both;
+	width: 700px;
+	height: auto;
+	margin: auto;
+	margin-top: 50px;
+	border: 10px solid #ccc;
+	min-height: 700px;
+}
+#receipt_head{
+	border-bottom: 2px solid #333;
+	height: 100px;
+}
+#receipt_logo{
+	height: 100px;
+}
+#receipt_head > span{
+	float: right;
+	font-size: 14px;
+	font-weight: bold;
+	color: #777;
+	padding: 10px;
+}
+/* 영수증 내용 부분 */
+#receipt_middle{
+	position: relative;
+	clear: both;
+	min-height: 500px; 
+	padding: 30px 20px 80px;
+}
+#receipt_middle li{
+	margin-bottom: 10px;
+}
+#receipt_middle table{
+	width: 600px;
+	margin: auto;
+}
+#receipt_middle span{
+	font-size: 11px;
+	font-weight: bold;
+}
+#receipt_middle img{
+	width: 36px;
+	height: 45px;
+	vertical-align: middle;
+}
+#receipt_middle table th{
+	border-bottom: 1px solid #777;
+	font-size: 14px;
+	text-align: center;
+	padding: 5px 10px;
+}
+#receipt_middle .product_title{
+	text-align: left;
+	overflow: hidden;
+  	text-overflow: ellipsis;
+  	white-space: nowrap;
+	width: 250px;
+}
+#receipt_middle table td{
+	border-top: 1px solid #eee;
+	font-size: 14px;
+	text-align: right;
+	height: 60px;
+	padding: 5px 15px;
+}
+#receipt_middle .product_count{
+	text-align: center;
+	width: 90px;
+}
+#receipt_middle .total_price{
+	position: absolute;
+	left: 40px;
+	bottom: 0px;
+	width: 600px;
+	margin: auto;
+	border-top: 1px solid #777;
+	text-align: right;
+	padding: 20px 0px;
+	color: #333;
+	font-size: 14px;
+}
+#receipt_middle .total_price strong{
+	font-size: 24px;
+}
+/* 영수증 하단 버튼부 */
+#receipt_bottom{
+	border-top: 1px solid #777;
+	height: 100px;
+	text-align: center;
+}
+#receipt_bottom .bottom_link{
+	display: inline-block;
+	width: 200px;
+	height: 50px;
+	border: 1px solid black;
+	background: black;
+	color: white;
+	font-size: 17px;
+	font-weight: bold;
+	margin: 20px 50px 0px;
+	padding-top: 10px;
+}
+#receipt_bottom .bottom_link:hover{
+	background: #333;
+	border: 1px solid #333;
+}
+
+

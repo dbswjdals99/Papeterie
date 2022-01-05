@@ -1,0 +1,296 @@
+@charset "UTF-8";
+
+#section{
+	width: 900px;
+	height: auto;
+	margin: auto;
+	margin-top: 50px;
+}
+#section #page_title{
+	font-size: 25px;
+	font-weight: bold;
+	
+}
+#section #page_sub{
+	float: right;
+	font-size: 15px;
+	color: #aaa;
+}
+#section strong{
+	color: black;
+}
+
+/* 상품 목록 */
+#goods_table{ 
+	clear: both;
+	width: 900px;
+	height: auto;
+	margin: auto;
+	margin-top: 30px;
+}
+#goods_table table{
+	margin-top: 10px;
+	border-spacing: 0px;
+	width: 900px;
+}
+#goods_table table th{
+	border-bottom: 1px solid #ccc;
+	border-top: 1px solid #aaa;
+	height: 30px;
+	background: #eee;
+	font-size: 13px;
+}
+#goods_table table td{
+	height: 60px;
+	padding: 1px 10px;
+	border-bottom: 1px solid #ccc;
+	text-align: center;
+	font-size: 13px;
+}
+#goods_table #goods_img{
+	width: 36px;
+	height: 45px;
+	vertical-align: middle;
+}
+#goods_table #goods_id{
+	width: 300px;
+	padding-left:150px;
+}
+#goods_table #goods_default{
+	width: 110px;
+	text-align: center;
+}
+#goods_table #goods_discount{
+	width: 120px;
+	text-align: center;
+}
+#goods_table .goods_id_td{
+	text-align: left;
+}
+#goods_table .goods_td{
+	border-left: 1px solid #ccc;
+}
+#goods_table #go_basket{
+	font-size: 15px;
+	tex-decoration: underline;
+	text-align: right;
+	height: 50px;
+}
+
+#goods_table #go_basket a{
+	color:black;
+}
+
+/* 상품 총 가격 */
+#goods_total_price{
+	height: 100px;
+	width: 900px;
+	margin-top: 50px;
+	padding: 30px 20px 10px;
+	border: 1px solid #ccc;
+	text-align: right;
+}
+#goods_total_price strong{
+		font-size: 17px;
+}
+#price_main, #price_ship, #price_total, .price_img{
+	display: inline-block;
+	font-size: 15px;
+}
+#goods_total_price #price_main{
+	width: 160px;
+	height: 50px;
+}
+#goods_total_price #price_ship{
+	width: 80px;
+	height: 50px;
+}
+#goods_total_price #price_total{
+	width: 120px;
+	height: 50px;
+}
+#goods_total_price .price_img{
+	margin: 0px 10px;
+	margin-left:25px;
+	width: 20px;
+	height: 50px;
+}
+
+/* 결제 동의 */
+#purchase_agree{
+	width: 900px;
+	min-height: 200px;
+	margin-top: 50px;
+}
+#agree_check_all label{
+	position: relative;
+	top: -1px;
+	font-weight:bold;
+	font-size: 14px;
+}
+.agree{
+	width: 900px;
+	height: 240px;
+	margin-top: 20px;
+	border: 1px solid #ccc;
+	padding: 10px 20px;
+}
+.agree > span{
+	font-size: 15px
+}
+.agree_detail{
+	width:850px;
+	height: 130px;
+	margin-top: 10px;
+	border: 1px solid #ccc;
+	border-top: 1px solid #aaa;
+}
+.agree_detail textarea{
+	width: 840px;
+	height: 120px;
+	resize: none;
+	border: none;
+	color: #555;
+	font-size: 12px;
+}
+.agree_check{
+	padding-top:30px;
+}
+.agree_check label{
+	font-size: 11px;
+	position: relative;
+	top: -3px;
+	margin: 0px;
+}
+/* 주문자 정보 */
+#user_detail{
+	margin-top: 50px;
+}
+#email_juso{
+	width: 100px;
+}
+#select_mail{
+	height: 25px;
+}
+/* 배송 주소 */
+#user_address{
+	margin-top: 50px;
+}
+#zipNo{
+	width: 100px;
+	margin-bottom: 5px;
+}
+#address_list{
+	display: none;
+}
+#roadAddrPart1{
+	width: 300px;
+	margin-bottom:5px;
+}
+#addrDetail{
+	width: 150px;
+}
+#target_phone{
+	ime-mode: disabled;
+}
+/* 결제 수단 */
+#purchase_detail{
+	margin-top: 50px;
+}
+.sudan{
+	margin-top: 5px;
+	margin-bottom: 5px;
+	display: none;
+}
+#first_sudan{
+	display: block; 
+}
+
+/* 공통 테이블 */
+#section table{
+	margin-top: 10px;
+	width: 900px;
+	border-spacing: 0px;
+	border-top: 1px solid #aaa;
+}
+#section table strong{
+	font-size: 15px;
+}
+#section .td_title{
+	background: #eee;
+	width: 150px;
+	font-weight: bold;
+}
+#section table td{
+	font-size: 13px;
+	height: 50px;
+	padding: 10px 30px;
+	border-bottom: 1px solid #ccc;
+}
+#section table input[type=text]{
+	width: 220px;
+	height: 25px;
+}
+.submit_alert{
+	color: red;
+	weight: bold;
+	font-size: 12px;
+	display: none;
+}
+
+/* 최종 결제 금액 */
+#purchase_final_price{
+	margin-top: 30px;
+	border: 1px solid #ccc;
+	width: 900px;
+	height: 70px;
+	padding: 15px 30px;
+	text-align: right;
+}
+#purchase_final_price #final_price{
+	font-size: 27px;
+}
+#purchase_button_area{
+	margin-top: 30px;
+	margin-bottom: 70px;
+	text-align: center;
+}
+#purchase_button_area input[type=submit]{
+	width: 250px;
+	height: 50px;
+	color: white;
+	background: black;
+	border: none;
+	font-size: 20px;
+	font-weight: bold;
+	cursor:pointer;
+}
+
+input[type="checkbox"]{
+	margin-right:10px;
+}
+
+textarea{outline:none;}
+
+input[type="text"]{
+	border:1px solid silver;
+	padding:15px;
+	outline:none;
+}
+
+.baesong_btn{
+	border:1px solid silver;
+	background:white;
+	height:32px;
+	font-weight:bold;
+	font-size:12px;
+	cursor:pointer;
+}
+
+select{
+	border:1px solid silver;	
+	outline:none;
+	height:30px;
+}
+
+

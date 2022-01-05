@@ -1,0 +1,16 @@
+@charset "UTF-8";
+
+#tos-head{
+	display:block;
+	width:1200px;
+	font-weight:bold;
+	font-size:24px;	
+	border-bottom:1px solid gray;
+	padding-bottom:10px;
+}
+
+#pre-text{
+	padding-top:20px;
+	font-size:14px; 
+	color:gray;
+}

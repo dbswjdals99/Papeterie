@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="kr.co.papeterie.mapper.BasketMapper">
+	<insert id="add_cart" parameterType="CartVO">
+		insert into cart (userid, pcode, count) values (#{userid}, #{pcode}, #{count})
+	</insert>
+	<select id="iscount" resultType="Integer">
+		select ifnull(max(count), 0) from cart 
+		where userid = #{_userid} and pcode = #{_pcode} and DATE_FORMAT(regdate, "%Y-%m-%d") = CURDATE()
+	</select>
+	<update id="update_count" parameterType="CartVO">
+		update cart set count = #{_count} where userid = #{_userid}
+	</update>
+	<select id="cartlist" resultType="CartVO">
+		select c.idx as idx, c.userid as userid, c.pcode as pcode, c.count as count, c.regdate as regdate, 
+		p.title as title, p.price as price, p.img as img from cart c , product p 
+		where c.userid = #{_userid} and c.pcode = p.pcode and DATE_FORMAT(c.regdate, "%Y-%m-%d") = CURDATE()
+	</select>
+	<update id="update_userid">
+		update cart set userid = #{_userid} where userid = #{_sessionid} and DATE_FORMAT(regdate, "%Y-%m-%d") = CURDATE()
+	</update>
+	<delete id="del_cart" parameterType="Integer">
+		delete from cart where idx = ${_idx}
+	</delete>
+	<insert id="add_wishlist" parameterType="String">
+		insert into wishlist (userid, pcode) values (#{_userid}, #{_pcode})
+	</insert>
+	<select id="iswishlist" parameterType="String" resultType="Integer">
+		select count(*) from wishlist where userid = #{_userid} and pcode = #{_pcode}
+	</select>
+	<select id="getpcode" parameterType="Integer" resultType="String">
+		select pcode from cart where idx = #{_idx}
+	</select>
+	<update id="deliver_ok">
+		update porder set state = 6 where order_code = #{_order_code}
+	</update>
+	<update id="add_cart_item">
+		update cart set count = count + 1 where idx = #{_idx}
+	</update>
+	<update id="sub_cart_item">
+		update cart set count = count - 1 where idx = #{_idx}
+	</update>
+
+</mapper>

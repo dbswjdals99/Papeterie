@@ -1,0 +1,176 @@
+@charset "UTF-8";
+
+#section{
+	width:1000px;
+	height:auto;
+	margin:auto;
+}
+
+.table th{
+	background:#fbfbfb;
+	text-align:center;
+}
+
+#title,#name{
+	border:1px solid silver;
+	padding:5px;
+	padding-left:10px;
+	font-size:12px;	
+}
+
+input:focus {outline:none;}
+
+h2{
+	font-size:24px;
+	font-weight:bold;
+	padding:20px;
+	margin-top:40px;
+
+}
+
+#write-sub{
+	width:150px;
+	height: 55px;
+	border: 1px solid white;
+	cursor: pointer;
+	font-size: 18px;
+	background: black;
+	color: white;
+	margin-bottom: 10px;
+	font-weight:bold;
+	margin-top:50px;
+}
+
+#write-sub:hover {
+	opacity:0.5;
+}
+
+#write-btn {
+	width: 150px;
+	height: 55px;
+	border: 1px solid white;
+	cursor: pointer;
+	font-size: 18px;
+	background: #f2f2f2;
+	color: black;
+	margin-bottom: 10px;
+	font-weight:bold;
+	margin-top:50px;
+}
+
+#write-btn:hover {
+	opacity:0.5;
+}
+
+.write-sel{
+	width:150px;
+	height:30px;
+}
+
+.list-center{
+	text-align:center;
+}
+
+.list-table th,td{
+	font-size:14px;
+}
+
+.list-table th{
+	text-align:center;
+}
+
+#btn_text{
+	text-align:right;
+}
+
+.table-center th{
+	text-align:center;
+}
+
+#bimil-head{
+width:600px;
+height:350px;
+margin:auto;
+border:1px solid silver;
+}
+
+#bimil-h2{
+	text-align:center;
+	font-weight:bold;
+	font-size:30px;
+	margin-bottom:50px;
+}
+
+.bimil-text{
+	text-align:center;
+	margin-top:40px;
+	margin-bottom:40px;
+	font-size:18px;
+}
+
+#bimil-title{
+	color:black;
+}
+
+#re{
+display:inline-block;
+width:20px;
+height:17px;
+background:gray;
+color:white;
+font-size:12px;
+text-align:center;
+}
+
+.bimil-passowrd{
+	font-weight:bold;
+	font-size:12px;
+}
+
+#bimil-inputpwd{
+	font-size:12px;
+	border:1px solid silver;
+}
+
+#bimil-content{
+	text-align:center;
+}
+
+#bimil-sub{
+	width: 150px;
+	height: 55px;
+	border: 1px solid white;
+	cursor: pointer;
+	font-size: 18px;
+	background: black;
+	color: white;
+	margin-bottom: 10px;
+	font-weight:bold;
+	margin-top:50px;
+}
+
+#content-btn{
+	width: 60px;
+	height: 35px;
+	border: 1px solid silver;
+	cursor: pointer;
+	font-size: 12px;
+	background: white;
+	color: black;
+	margin-bottom: 10px;
+	font-weight:bold;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

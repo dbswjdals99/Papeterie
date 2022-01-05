@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="kr.co.papeterie.mapper.AdminMapper">
+	
+	<select id="userlist" resultType="String">
+		select count(*) from member;
+	</select>
+	
+	<select id="userpoint" resultType="String">
+		SELECT SUM(spoint) FROM member;
+	</select>
+	
+	<select id="gongjilist" resultType="String">
+		select count(*) from gongji;
+	</select>
+	
+	<select id="qnalist" resultType="String">
+		select count(*) from qna where bimil=1;
+	</select>
+	
+	<select id="qnalist2" resultType="String">
+		select count(*) from qna where bimil=0;
+	</select>
+	
+	<select id="user_list" resultType="kr.co.papeterie.vo.MemberVO">
+		select * from member order by idx desc;
+	</select>
+	
+	<select id="gongji_list" resultType="kr.co.papeterie.vo.GongjiVO">
+		select * from gongji order by id desc;
+	</select>
+	
+	<select id="gongji_list_limit" resultType="kr.co.papeterie.vo.GongjiVO">
+		select * from gongji order by id desc limit 3;
+	</select>
+	
+	<select id="qna_list" resultType="kr.co.papeterie.vo.QnaVO">
+		select * from qna order by id desc;
+	</select>
+	
+	<select id="qna_list_limit" resultType="kr.co.papeterie.vo.QnaVO">
+		select * from qna order by id desc limit 3;
+	</select>
+	
+	<select id="pro_list" resultType="kr.co.papeterie.vo.GoodsVO">
+		select * from product order by idx desc;
+	</select>
+	
+	<insert id="product_add_ok" parameterType="kr.co.papeterie.vo.GoodsVO">
+		insert into product(title,price,img,content,category,pcode,regdate)
+		values(#{title},#{price},#{img},#{content},#{category},#{pcode},now())
+	</insert>
+	
+	<delete id="product_delete">
+		delete from product where idx=#{param1}
+	</delete>
+	
+	<select id="admin_login_ok" resultType="kr.co.papeterie.vo.MemberVO">
+		select userid,pwd from member where userid='admin' and pwd='admin';
+	</select>
+	
+	<select id="porder" resultType="kr.co.papeterie.vo.OrderVO">
+		SELECT p.*,a.addr1 FROM porder AS p , address AS a WHERE a.idx=p.addr_id
+		order by idx desc;
+	</select>
+	
+	<update id="state_ok" parameterType="String">
+		update porder set state=#{param1} where idx=#{param2};
+	</update>
+	
+	<select id="state_chk" resultType="kr.co.papeterie.vo.OrderVO">
+		SELECT COUNT(state) AS cnt , state FROM porder
+		GROUP BY state
+		HAVING COUNT(state) >= 1;
+	</select>
+	
+	<select id="porder_content" resultType="kr.co.papeterie.vo.OrderVO" parameterType="kr.co.papeterie.vo.OrderVO">
+		SELECT p.*,a.addr1,a.addr2 FROM porder AS p , address AS a WHERE a.idx=p.addr_id AND p.idx=#{idx}
+	</select>
+	
+	<select id="porder_pcode" resultType="kr.co.papeterie.vo.GoodsVO">
+		SELECT * FROM product AS p , orderitem AS o
+		WHERE p.pcode=o.pcode AND o.order_code=#{param2}
+	</select>
+	
+	<select id="memo" resultType="String">
+		select * from memo;
+	</select>
+	
+	<update id="memo_update">
+		update memo set memo=#{param1};
+	</update>
+	
+	<select id="review" resultType="kr.co.papeterie.vo.ReviewVO">
+		SELECT r.* , p.title,img FROM review AS r , product AS p WHERE r.pcode=p.pcode;
+	</select>
+	
+	<delete id="del_review">
+		delete from review where idx = #{_idx}
+	</delete>
+	
+	<delete id="porder_delete">
+		delete from porder where idx=#{param1}
+	</delete>
+	
+	<select id="product_update" resultType="kr.co.papeterie.vo.GoodsVO" parameterType="Integer">
+		select * from product where idx=#{param1}
+	</select>
+	
+	<update id="product_update_ok" parameterType="kr.co.papeterie.vo.GoodsVO">
+		update product set title=#{title}, price=#{price}, category=#{category}, pcode=#{pcode}, option=#{sold}
+		where idx=#{idx}
+	</update>
+</mapper>

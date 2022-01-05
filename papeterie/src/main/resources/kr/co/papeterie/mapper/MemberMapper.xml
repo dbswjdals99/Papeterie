@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="kr.co.papeterie.mapper.MemberMapper">
+	<select id="login_ok" parameterType="MemberVO" resultType="MemberVO">
+		select * from member where userid = #{userid} and pwd = #{pwd}
+	</select>
+	<select id="userid_search_ok" parameterType="MemberVO" resultType="String">
+		select userid from member where uname = #{uname} and email = #{email}
+	</select>
+	<select id="pwd_search_ok" parameterType="MemberVO" resultType="String">
+		select pwd from member
+		where uname = #{uname} and email = #{email} and userid = #{userid}
+	</select>
+<!-- 
+	<select id="userid_check" resultType="Integer">
+		select count(*) from member where userid = #{param1}
+	</select>
+	<select id="mypage" resultType="MemberVO">
+		select * from member where userid = #{param1}
+	</select>
+	<update id="mypage_update_ok" parameterType="MemberVO">
+		update member set email = #{email},phone=#{phone}
+		where userid = #{userid}
+	</update>
+	<select id="ispwd" resultType="Integer">
+		select count(*) from member
+		where pwd=#{param1} and userid=#{param2}
+	</select>
+	<update id="change_pwd">
+		update member set pwd = #{param1} where userid = #{param2}
+	</update>
+ -->	
+	<select id="mywishlist" resultType="WishlistVO">
+		select w.*, p.title, p.price, p.img from wishlist w , product p 
+		where w.pcode = p.pcode and w.userid = #{_userid} order by idx desc
+	</select>
+	<delete id="del_wishlist">
+		delete from wishlist where idx = #{_idx}
+	</delete>
+	<insert id="review_write_ok" parameterType="ReviewVO">
+		insert into review (order_code, pcode, score, userid, content, filename) 
+		values (#{order_code}, #{pcode}, #{score}, #{userid}, #{content}, #{filename})
+	</insert>
+	<select id="myorderlist" resultType="MyOrderVO">
+		select p.idx, p.order_code, p.price, p.ship_price, p.state, p.regdate, o.pcode, p2.title, p2.img 
+		from porder p, orderitem o, product p2 where userid = #{_userid} and p.order_code = o.order_code and o.pcode = p2.pcode order by p.order_code desc;
+	</select>
+	<insert id="signup_ok" parameterType="MemberVO">
+		insert into member(userid,uname,pwd,email,phone,regdate,gender)
+		values(#{userid},#{uname},#{pwd},#{email},#{phone},now(),#{gender});
+	</insert>
+	<select id="userid_check" resultType="String">
+		select count(*) as chk from member where userid=#{param1};
+	</select>
+	<select id="myreviewlist" resultType="ReviewVO">
+		select * from review where userid = #{_userid}
+	</select>
+	<delete id="del_review">
+		delete from review where idx = #{_idx}
+	</delete>
+	<select id="member_update" resultType="MemberVO">
+		select * from member where userid=#{param1}
+	</select>
+	<update id="member_update_ok" parameterType="MemberVO">
+		update member set uname=#{uname}, email=#{email}, phone=#{phone}, pwd=#{pwd}
+		where idx=#{idx} 
+	</update>
+	<select id="getreview" resultType="ReviewVO">
+		select r.*, p.title, p.img from review r, product p where r.idx = #{_idx} and r.pcode = p.pcode
+	</select>
+	<update id="review_update_ok" parameterType="ReviewVO">
+		update review set score = #{score}, content = #{content}, filename = #{filename} where idx = ${idx}
+	</update>
+	<update id="review_update_ok2" parameterType="ReviewVO">
+		update review set score = #{score}, content = #{content} where idx = ${idx}
+	</update>
+	<select id="myorderdetail" resultType="MyOrderVO">
+		select p.*, o.pcode, p2.title, p2.img 
+		from porder p, orderitem o, product p2 where userid = #{_userid} and p.order_code = o.order_code and o.pcode = p2.pcode and p.order_code = #{_order_code}
+	</select>
+	<select id="mypage_qna" resultType="kr.co.papeterie.vo.QnaVO">
+		select * from qna where userid=#{param1}
+	</select>
+</mapper>
