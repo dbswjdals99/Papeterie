@@ -46,13 +46,13 @@
 
 
 ## 5.사진
-<br>
++  [사진 더보기](https://drive.google.com/file/d/1xrA8B4hhr4ymUnbCprJ9OGw1cjl4dsrl/view?usp=sharing)
 
 ![image](https://user-images.githubusercontent.com/56786339/198815319-4bd16e82-7266-4a3e-a9e8-d3ca7a0031f4.png)
 ![image](https://user-images.githubusercontent.com/56786339/198815331-65eb9965-1b72-4687-a70f-2fb74db9a3e9.png)
 
-## 6.Papeterie PDF파일
-[구글드라이브 PDF 뷰어 보러가기](https://drive.google.com/file/d/19EWHKdrVSDP34myOBKJz1zX30x-bhnlR/view?usp=sharing)
+## 6.Papeterie PPT
++  [PPT 바로가기](https://drive.google.com/file/d/19EWHKdrVSDP34myOBKJz1zX30x-bhnlR/view?usp=sharing)
 
 ## 7. 프로젝트 바로가기
 +  [Papeterie 바로가기](http://3.37.233.74:8080/main/index)
