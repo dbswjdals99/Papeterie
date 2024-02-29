@@ -5,9 +5,9 @@
 <head>
 <meta charset="UTF-8">
 <title>PAPETERIE - login</title>
-<link rel="stylesheet" href="/resources/css/style.css">
-<link rel="stylesheet" href="/resources/css/login.css">
-<script src="/resources/js/login.js"></script>
+<link rel="stylesheet" href="/papeterie/resources/css/style.css">
+<link rel="stylesheet" href="/papeterie/resources/css/login.css">
+<script src="/papeterie/resources/js/login.js"></script>
 </head>
 <body>
 
@@ -43,7 +43,7 @@
 					<tr>
 						<td>
 							<div align="center">
-								<span class="login-sub-text"><a href="../member/signup1" style="color:black;text-decoration:none;">회원가입</a></span>
+								<span class="login-sub-text"><a href="/papeterie/member/signup1" style="color:black;text-decoration:none;">회원가입</a></span>
 								<a style="color:silver;">&nbsp;&nbsp;|&nbsp;&nbsp;</a>
 								<span onclick="view_uidsearch()" class="login-sub-text">아이디 찾기</span>
 								<a style="color:silver;">&nbsp;&nbsp;|&nbsp;&nbsp;</a>

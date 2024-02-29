@@ -5,11 +5,11 @@
 <head>
 <meta charset="UTF-8">
 <title>PAPETERIE - 배송지관리</title>
-<link rel="stylesheet" href="/resources/css/style.css">
-<link rel="stylesheet" href="/resources/css/member.css">
-<link rel="stylesheet" href="/resources/css/addressbook.css?var=2">
+<link rel="stylesheet" href="/papeterie/resources/css/style.css">
+<link rel="stylesheet" href="/papeterie/resources/css/member.css">
+<link rel="stylesheet" href="/papeterie/resources/css/addressbook.css?var=2">
 <script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
-<script src="/resources/js/member.js"></script>
+<script src="/papeterie/resources/js/member.js"></script>
 <script>
 </script>
 </head>
@@ -29,14 +29,14 @@
 				</tr>
 				<c:if test="${list.size() == 0 }">
 					<tr>
-						<td align="center" colspan="5"><img src="/resources/img/empty.png" width="300"></td>
+						<td align="center" colspan="5"><img src="/papeterie/resources/img/empty.png" width="300"></td>
 					</tr>
 				</c:if>
 				<c:forEach items="${list}" var="avo">
 				<tr>
 					<td>
 						<c:if test="${avo.sdefault == 1}">
-						<img src="/resources/img/sdefault.svg" alt="기본 배송지">${avo.addr_name}
+						<img src="/papeterie/resources/img/sdefault.svg" alt="기본 배송지">${avo.addr_name}
 						</c:if>
 						<c:if test="${avo.sdefault == 0}">
 						${avo.addr_name}
@@ -46,8 +46,8 @@
 					<td>${avo.phone}</td>
 					<td>${avo.rname}</td>
 					<td>
-						<img src="/resources/img/ic_desc.svg" alt="수정" title="수정" onclick="update_addr_fn(${avo.idx})" style="cursor:pointer;">
-						<a href="del_addr?idx=${avo.idx}"><img src="/resources/img/ic_delete.svg" alt="삭제" title="삭제"></a>
+						<img src="/papeterie/resources/img/ic_desc.svg" alt="수정" title="수정" onclick="update_addr_fn(${avo.idx})" style="cursor:pointer;">
+						<a href="del_addr?idx=${avo.idx}"><img src="/papeterie/resources/img/ic_delete.svg" alt="삭제" title="삭제"></a>
 					</td>
 				</tr>
 				</c:forEach>

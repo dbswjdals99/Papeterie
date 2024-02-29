@@ -129,7 +129,7 @@ function additem(idx) {
 	console.log(itemcount);
 
 	$.ajax({
-		url : "../basket/additem",
+		url : "/papeterie/basket/additem",
 		method : "GET",
 		data : {
 			idx : idx
@@ -155,7 +155,7 @@ function subitem(idx) {
 	console.log(itemcount);
 	if (itemcount > 1) {
 		$.ajax({
-			url : "../basket/subitem",
+			url : "/papeterie/basket/subitem",
 			method : "GET",
 			data : {
 				idx : idx

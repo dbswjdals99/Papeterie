@@ -7,8 +7,8 @@
 <head>
 <meta charset="UTF-8">
 <title>상품 결제</title>
-<link rel="stylesheet" href="/resources/css/purchase.css">
-<script src="/resources/js/purchase.js"></script>
+<link rel="stylesheet" href="/papeterie/resources/css/purchase.css">
+<script src="/papeterie/resources/js/purchase.js"></script>
 
 </head>
 <body>
@@ -65,7 +65,7 @@
 				</c:if>
 				<tr>
 					<td colspan="5" id="go_basket">
-						<a href="../basket/cart"><span>장바구니 가기></span></a>
+						<a href="/papeterie/basket/cart"><span>장바구니 가기></span></a>
 					</td>
 				</tr>
 			</table>
@@ -75,7 +75,7 @@
 				총 ${total_count} 개의 상품금액<br>
 				<strong><fmt:formatNumber value="${total_price}"/>원</strong>
 			</div>
-			<div class="price_img"><img src="/resources/img/purchase_plus.png"></div>
+			<div class="price_img"><img src="/papeterie/resources/img/purchase_plus.png"></div>
 			<div id="price_ship">
 				배송비<br>
 				<c:if test="${total_price >= 30000}">
@@ -87,7 +87,7 @@
 				<strong>2,500원</strong>
 				</c:if>
 			</div>
-			<div class="price_img"><img src="/resources/img/purchase_right_arrow.png"></div>
+			<div class="price_img"><img src="/papeterie/resources/img/purchase_right_arrow.png"></div>
 			<div id="price_total">
 				합계<br>
 				<strong><fmt:formatNumber value="${total_price+bprice}"/>원</strong>

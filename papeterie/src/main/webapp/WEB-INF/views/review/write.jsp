@@ -5,10 +5,10 @@
 <head>
 <meta charset="UTF-8">
 <title>PAPETERIE - 리뷰</title>
-<link rel="stylesheet" href="/resources/css/style.css">
-<link rel="stylesheet" href="/resources/css/review.css">
+<link rel="stylesheet" href="/papeterie/resources/css/style.css">
+<link rel="stylesheet" href="/papeterie/resources/css/review.css">
 <script src="http://code.jquery.com/jquery-latest.js"></script>
-<script src="/resources/js/mypage.js"></script>
+<script src="/papeterie/resources/js/mypage.js"></script>
 </head>
 <body>
 

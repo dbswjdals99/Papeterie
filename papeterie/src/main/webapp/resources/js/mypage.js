@@ -4,7 +4,7 @@
 
 function open_pop(pcode, ordercode){
     var frmPop= document.frmPopup;
-    var url = '../review/write';
+    var url = '/papeterie/review/write';
     window.open('','write','width=450, height=680, toolbar=no, menubar=no, resizable=no');  
      
     frmPop.action = url;
@@ -16,7 +16,7 @@ function open_pop(pcode, ordercode){
 
 function deliver_ok(ordercode) {
 	$.ajax({
-		url : "../member/delivery_ok",
+		url : "/papeterie/member/delivery_ok",
 		method : "GET",
 		data : { order_code : ordercode },
 		cache : false,
@@ -65,7 +65,7 @@ function update_ok() {
 	var formData = new FormData($('#frm')[0]);
 
 	$.ajax({
-		url : "../review/update_ok",
+		url : "/papeterie/review/update_ok",
 		method : "POST",
 		enctype: "multipart/form-data",  
 		data : formData,

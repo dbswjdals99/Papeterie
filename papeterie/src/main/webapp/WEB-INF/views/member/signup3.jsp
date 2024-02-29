@@ -81,7 +81,7 @@ text-decoration:none;
 </div>
 <div class="join_second">
 	<span id="text1">회원가입이 완료되었습니다!! 로그인 하시겠습니까?</span><br><br><br><br>
-	<a href="login" class="text2" id="yes">예</a><a href="../main/index" class="text2" id="no">아니오</a>
+	<a href="login" class="text2" id="yes">예</a><a href="/papeterie/main/index" class="text2" id="no">아니오</a>
 </div>
 </div>
 </body>

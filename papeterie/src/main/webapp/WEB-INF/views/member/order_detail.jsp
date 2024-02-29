@@ -5,10 +5,10 @@
 <head>
 <meta charset="UTF-8">
 <title>PAPETERIE - 주문상세보기</title>
-<link rel="stylesheet" href="/resources/css/style.css">
-<link rel="stylesheet" href="/resources/css/member.css">
-<link rel="stylesheet" href="/resources/css/mypage.css">
-<script src="/resources/js/mypage.js"></script>
+<link rel="stylesheet" href="/papeterie/resources/css/style.css">
+<link rel="stylesheet" href="/papeterie/resources/css/member.css">
+<link rel="stylesheet" href="/papeterie/resources/css/mypage.css">
+<script src="/papeterie/resources/js/mypage.js"></script>
 </head>
 <body>
 	<div id="section">

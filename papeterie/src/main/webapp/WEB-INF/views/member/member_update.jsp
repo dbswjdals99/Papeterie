@@ -5,10 +5,10 @@
 <head>
 <meta charset="UTF-8">
 <title>PAPETERIE - 배송지관리</title>
-<link rel="stylesheet" href="/resources/css/style.css">
-<link rel="stylesheet" href="/resources/css/member.css">
+<link rel="stylesheet" href="/papeterie/resources/css/style.css">
+<link rel="stylesheet" href="/papeterie/resources/css/member.css">
 <script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
-<script src="/resources/js/member.js"></script>
+<script src="/papeterie/resources/js/member.js"></script>
 <style>
 #content th{
 	font-size:14px;
@@ -147,7 +147,7 @@ function pwd_view()
 					</tr>
 					<tr>
 						<td colspan="2" align="center" style="border-bottom:none;padding-top:20px;">
-							<input type="button" value="이전" onclick="location='../main/index'">
+							<input type="button" value="이전" onclick="location='/papeterie/main/index'">
 							<input type="submit" value="정보수정">
 						</td>
 					</tr>

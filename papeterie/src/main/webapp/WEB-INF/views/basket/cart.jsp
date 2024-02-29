@@ -6,9 +6,9 @@
 <head>
 <meta charset="UTF-8">
 <title>PAPETERIE - 장바구니</title>
-<link rel="stylesheet" href="/resources/css/style.css">
-<link rel="stylesheet" href="/resources/css/cart.css">
-<script src="/resources/js/cart.js"></script>
+<link rel="stylesheet" href="/papeterie/resources/css/style.css">
+<link rel="stylesheet" href="/papeterie/resources/css/cart.css">
+<script src="/papeterie/resources/js/cart.js"></script>
 </head>
 <body>
 
@@ -37,9 +37,9 @@
 						<td><input type="checkbox" name="cartchk" id="${cvo.pcode}" value="${cvo.idx}" checked="checked" onclick="calc_price()"></td>
 						<td class="goods_id_td"><img id="goods_img" src="${cvo.img}"> ${cvo.title}</td>
 						<td>
-							<img alt="" src="/resources/img/ic_remove_circle_24px.svg" onclick="subitem('${cvo.idx}')" style="cursor:pointer;">
+							<img alt="" src="/papeterie/resources/img/ic_remove_circle_24px.svg" onclick="subitem('${cvo.idx}')" style="cursor:pointer;">
 							<span id="itemcount">${cvo.count}</span> 개
-							<img alt="" src="/resources/img/ic_add_circle_24px.svg" onclick="additem('${cvo.idx}')" style="cursor:pointer;">
+							<img alt="" src="/papeterie/resources/img/ic_add_circle_24px.svg" onclick="additem('${cvo.idx}')" style="cursor:pointer;">
 						</td>
 						<td><fmt:formatNumber value="${cvo.price}"/> 원</td>
 						<td class="goods_td">10%포인트 적립</td>
@@ -56,13 +56,13 @@
 					총 <span id="price_main_cnt"></span>개의 상품금액<br> <strong><span id="price_main_total"></span> 원</strong>
 				</div>
 				<div class="price_img">
-					<img src="/resources/img/purchase_plus.png">
+					<img src="/papeterie/resources/img/purchase_plus.png">
 				</div>
 				<div id="price_ship">
 					배송비<br> <strong><span id="price_main_ship"></span> 원</strong>
 				</div>
 				<div class="price_img">
-					<img src="/resources/img/purchase_right_arrow.png">
+					<img src="/papeterie/resources/img/purchase_right_arrow.png">
 				</div>
 				<div id="price_total">
 					합계<br> <strong><span id="price_total_plus"></span> 원</strong>
@@ -73,7 +73,7 @@
 				<span class="btn_left_box">
 					<button type="button" class="btn_order_choice_del btn-left" onclick="cart_process('cartDelete');">선택 상품 삭제</button>
 					<c:if test="${userid == null}">
-					<button type="button" class="btn_order_choice_wish btn-left" onclick="location='../member/login'">선택 상품 찜</button>
+					<button type="button" class="btn_order_choice_wish btn-left" onclick="location='/papeterie/member/login'">선택 상품 찜</button>
 					</c:if>
 					<c:if test="${userid != null}">
 					<button type="button" class="btn_order_choice_wish btn-left" onclick="cart_process('cartToWish');">선택 상품 찜</button>

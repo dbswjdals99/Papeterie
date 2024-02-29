@@ -12,7 +12,7 @@
 <script src="https://cdn.datatables.net/1.11.3/js/dataTables.bootstrap.min.js"></script>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://cdn.datatables.net/1.11.3/css/dataTables.bootstrap.min.css">
-<script src="/resources/js/member.js?var=2"></script>
+<script src="/papeterie/resources/js/member.js?var=2"></script>
 <style>
 	td{
 	text-align:center

@@ -127,7 +127,7 @@ function count_goods(my){
 function add_cart_fn(pcode)
 {
 	$.ajax({
-		url : "../basket/add_cart",
+		url : "/papeterie/basket/add_cart",
 		method : "GET",
 		data : {
 			pcode : pcode,
@@ -139,7 +139,7 @@ function add_cart_fn(pcode)
 			//console.log(data);
 			if (data.trim() != null) {
 				if (confirm("장바구니로 이동하시겠습니까?")) {
-					location="../basket/cart";
+					location="/papeterie/basket/cart";
 				}
 			}
 		},
@@ -152,17 +152,17 @@ function add_cart_fn(pcode)
 
 function qna_write(userid){
 	if(userid != ""){
-		location = "/qna/write";
+		location = "/papeterie/qna/write";
 	}
 	else{
-		location = "/member/login";
+		location = "/papeterie/member/login";
 	}
 }
 
 function add_wish_fn(pcode) {
 	//alert(pcode);
 	$.ajax({
-		url : "../basket/addwish",
+		url : "/papeterie/basket/addwish",
 		method : "GET",
 		data : {
 			pcode : pcode
@@ -200,7 +200,7 @@ function add_wish_fn(pcode) {
 			
 			if(reviewlist.length<1){
 				a = a+"<tr>";
-				a = a+"<td colspan='4'><img src='/resources/img/empty.png' width='300'></td>";
+				a = a+"<td colspan='4'><img src='/papeterie/resources/img/empty.png' width='300'></td>";
 				a = a+"</tr>";
 			}
 			else{
@@ -298,7 +298,7 @@ function Next_qna(p){
 						a = a+"<td class='td_title'><a class='bimil_title' href='javascript:view_qna("+i+")'>"+qnalist[i].title+"</a></td>";
 					}
 					else{
-						a = a+"<td class='td_title'><a href='javascript:bimil_check("+i+")'><img src='/resources/img/ico_lock.gif'>"+qnalist[i].title+"</a></td>";
+						a = a+"<td class='td_title'><a href='javascript:bimil_check("+i+")'><img src='/papeterie/resources/img/ico_lock.gif'>"+qnalist[i].title+"</a></td>";
 					}
 					a = a+"<td class='td_dap'>"+qnalist[i].dap+"</td>";
 					a = a+"<td>"+qnalist[i].writeday+"</td>";	
@@ -357,7 +357,7 @@ function Next_qna(p){
 function add_wish_fn(pcode) {
 	//alert(pcode);
 	$.ajax({
-		url : "../basket/addwish",
+		url : "/papeterie/basket/addwish",
 		method : "GET",
 		data : {
 			pcode : pcode

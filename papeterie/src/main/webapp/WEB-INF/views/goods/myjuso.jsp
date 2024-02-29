@@ -6,8 +6,8 @@
 <head>
 <meta charset="UTF-8">
 <title>내 주소 리스트</title>
-<link rel="stylesheet" href="/resources/css/myjuso.css">
-<script src="/resources/js/myjuso.js"></script>
+<link rel="stylesheet" href="/papeterie/resources/css/myjuso.css">
+<script src="/papeterie/resources/js/myjuso.js"></script>
 
 </head>
 <body>

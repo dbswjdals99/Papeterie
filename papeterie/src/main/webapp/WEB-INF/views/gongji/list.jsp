@@ -7,7 +7,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<link rel="stylesheet" href="/resources/css/gongji.css">
+<link rel="stylesheet" href="/papeterie/resources/css/gongji.css">
 </head>
 <body>
 

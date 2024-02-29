@@ -119,7 +119,7 @@ public class MemberServiceImpl implements MemberService {
 
 	@Override
 	public String review_write_ok(HttpServletRequest request, HttpSession session, ReviewVO rvo) throws Exception {
-		// save path : /resources/img/p01/review/...
+		// save path : /papeterie/resources/img/p01/review/...
 		ServletContext application = session.getServletContext();
 		String rootPath = application.getRealPath("/");
 		int max = 1024 * 1024 * 10;
@@ -183,7 +183,7 @@ public class MemberServiceImpl implements MemberService {
 						}
 						
 						File savefile = new File(rootPath + "resources/img/" + cate + "/review/" + fileName);
-						newfilename = "/resources/img/" + cate + "/review/" + fileName;
+						newfilename = "/papeterie/resources/img/" + cate + "/review/" + fileName;
 						long size = filePart.writeTo(savefile);
 					}
 					else {
@@ -353,7 +353,7 @@ public class MemberServiceImpl implements MemberService {
 						}
 						
 						File savefile = new File(rootPath + "resources/img/" + cate + "/review/" + fileName);
-						newfilename = "/resources/img/" + cate + "/review/" + fileName;
+						newfilename = "/papeterie/resources/img/" + cate + "/review/" + fileName;
 					long size = filePart.writeTo(savefile);
 					}
 					else {

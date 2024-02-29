@@ -6,10 +6,10 @@
 <head>
 <meta charset="UTF-8">
 <title>PAPETERIE - 리뷰</title>
-<link rel="stylesheet" href="/resources/css/style.css">
-<link rel="stylesheet" href="/resources/css/member.css">
-<link rel="stylesheet" href="/resources/css/review.css?var=1">
-<script src="/resources/js/member.js?var=2"></script>
+<link rel="stylesheet" href="/papeterie/resources/css/style.css">
+<link rel="stylesheet" href="/papeterie/resources/css/member.css">
+<link rel="stylesheet" href="/papeterie/resources/css/review.css?var=1">
+<script src="/papeterie/resources/js/member.js?var=2"></script>
 <script>
 </script>
 </head>
@@ -19,7 +19,7 @@
  		
 		<div id="content">
 			<div id="review-head" style="display:inline-block;margin-bottom:20px;">상품문의</div>
-			<div id="qna_write"><input type="button" value="상품 문의하기" id="qna_write_btn" onclick="location='../qna/write'"></div>
+			<div id="qna_write"><input type="button" value="상품 문의하기" id="qna_write_btn" onclick="location='/papeterie/qna/write'"></div>
 			<BR>
 			<table id="">
 				<tr>
@@ -30,7 +30,7 @@
 				</tr>
 				<c:if test="${list.size() == 0 }">
 					<tr>
-						<td align="center" colspan="4"><img src="/resources/img/empty.png" width="300"></td>
+						<td align="center" colspan="4"><img src="/papeterie/resources/img/empty.png" width="300"></td>
 					</tr>
 				</c:if>
 				<c:forEach items="${list}" var="qvo">
@@ -53,7 +53,7 @@
 							기타문의
 						</c:if>
 					</td>
-					<td><a href="../qna/content?id=${qvo.id}">${qvo.title}</a></td>
+					<td><a href="/papeterie/qna/content?id=${qvo.id}">${qvo.title}</a></td>
 					<td>
 						<c:if test="${qvo.dapbun == 1}">
 							<span>답변완료</span>

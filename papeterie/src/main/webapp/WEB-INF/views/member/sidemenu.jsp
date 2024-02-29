@@ -6,13 +6,13 @@
 					<div class="title">쇼핑정보</div>
 					<ul class="sub">
 						<li>
-							<a href="../member/mypage">전체주문내역</a>
+							<a href="/papeterie/member/mypage">전체주문내역</a>
 						</li>
 						<li>
 							<a href="#">취소/반품/교환 내역</a>
 						</li>
 						<li>
-							<a href="../member/wishlist">찜리스트</a>
+							<a href="/papeterie/member/wishlist">찜리스트</a>
 						</li>
 						<li>
 							<a href="#">고객센터</a>
@@ -23,16 +23,16 @@
 					<div class="title">회원정보</div>
 					<ul class="sub">
 						<li>
-							<a href="../member/member_update">회원정보 변경</a>
+							<a href="/papeterie/member/member_update">회원정보 변경</a>
 						</li>
 						<li>
-							<a href="../member/addressbook">배송지관리</a>
+							<a href="/papeterie/member/addressbook">배송지관리</a>
 						</li>
 						<li>
-							<a href="../member/mypage_qna">상품 문의</a>
+							<a href="/papeterie/member/mypage_qna">상품 문의</a>
 						</li>
 						<li>
-							<a href="../member/myreview">상품 후기</a>
+							<a href="/papeterie/member/myreview">상품 후기</a>
 						</li>
 					</ul>
 				</li>

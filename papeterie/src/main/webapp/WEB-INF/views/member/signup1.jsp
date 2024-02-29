@@ -261,7 +261,7 @@ outline:none;
                 </li>
             </ul>
             <ul class="footBtwrap clearfix">
-                <li><button type="button" class="fpmgBt1" onclick="location.href='../main/index' ">비동의</button></li>
+                <li><button type="button" class="fpmgBt1" onclick="location.href='/papeterie/main/index' ">비동의</button></li>
                 <li><button class="fpmgBt2" onclick="return checked()">동의</button></li>
             </ul>
         </form>

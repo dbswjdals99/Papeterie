@@ -5,10 +5,10 @@
 <head>
 <meta charset="UTF-8">
 <title>PAPETERIE - mypage</title>
-<link rel="stylesheet" href="/resources/css/style.css">
-<link rel="stylesheet" href="/resources/css/member.css">
-<link rel="stylesheet" href="/resources/css/mypage.css">
-<script src="/resources/js/mypage.js"></script>
+<link rel="stylesheet" href="/papeterie/resources/css/style.css">
+<link rel="stylesheet" href="/papeterie/resources/css/member.css">
+<link rel="stylesheet" href="/papeterie/resources/css/mypage.css">
+<script src="/papeterie/resources/js/mypage.js"></script>
 </head>
 <body>
 	<div id="section">
@@ -34,7 +34,7 @@
 							<th style="border-top:1px solid black;">주문일시</th>
 						</tr>
 						<tr>
-							<td align="center" colspan="5"><img src="/resources/img/empty.png" width="300"></td>
+							<td align="center" colspan="5"><img src="/papeterie/resources/img/empty.png" width="300"></td>
 						</tr>
 					</c:if>
 					<c:forEach items="${olist}" var="mvo">
@@ -55,12 +55,12 @@
 					<tr>
 						<td class="td2" colspan="2">
 							<div class="item_desc">
-								<a href="../goods/goods_view?pcode=${mvo.pcode}" id="goods-title">
+								<a href="/papeterie/goods/goods_view?pcode=${mvo.pcode}" id="goods-title">
 								<img src="${mvo.img}" width="35"> &nbsp; 
 								<span>${mvo.title}</span>
 								</a>
-								<a href="../goods/goods_view?pcode=${mvo.pcode}" target="_blank">
-									<img src="/resources/img/ic_open_in_new_24px.svg" alt="새창으로 열기" title="새창으로 열기">
+								<a href="/papeterie/goods/goods_view?pcode=${mvo.pcode}" target="_blank">
+									<img src="/papeterie/resources/img/ic_open_in_new_24px.svg" alt="새창으로 열기" title="새창으로 열기">
 								</a>
 							</div>
 						</td>

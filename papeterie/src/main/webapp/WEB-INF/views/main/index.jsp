@@ -7,8 +7,8 @@
 <meta charset="UTF-8">
 <title>PAPETERIE</title>
 <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
-<link rel="stylesheet" href="/resources/css/style.css">
-<link rel="stylesheet" href="/resources/css/goods_list.css">
+<link rel="stylesheet" href="/papeterie/resources/css/style.css">
+<link rel="stylesheet" href="/papeterie/resources/css/goods_list.css">
 <style>
 .slider img{margin:0 auto;}
 	
@@ -63,22 +63,22 @@ $(document).ready(function(){
 <body>
 	<div class="slider">
     <div>
-      <img src="/resources/img/main1.jpg">
+      <img src="/papeterie/resources/img/main1.jpg">
     </div>
     <div>
-      <img src="/resources/img/main2.jpg">
+      <img src="/papeterie/resources/img/main2.jpg">
     </div>
     <div>
-      <img src="/resources/img/main3.gif">
+      <img src="/papeterie/resources/img/main3.gif">
     </div>
     <div>
-      <img src="/resources/img/main4.gif">
+      <img src="/papeterie/resources/img/main4.gif">
     </div>
     <div>
-      <img src="/resources/img/main5.gif">
+      <img src="/papeterie/resources/img/main5.gif">
     </div>
     <div>
-      <img src="/resources/img/main6.gif">
+      <img src="/papeterie/resources/img/main6.gif">
     </div>
 </div>
 	<div id="section3">
@@ -92,14 +92,14 @@ $(document).ready(function(){
 				<div class="goods-item">
 					<div class="goods-item-imgbox">
 						<c:if test="${gvo.option == -1}">
-							<div class="imgover_soldout" onclick="location='../goods/goods_view?pcode=${gvo.pcode}'" style="cursor:pointer;">
+							<div class="imgover_soldout" onclick="location='/papeterie/goods/goods_view?pcode=${gvo.pcode}'" style="cursor:pointer;">
 								<div class="imgover_soldout_inner"><strong>Sold Out</strong></div>
 							</div>
 						</c:if>
-						<img src="${gvo.img}" width="270" height="350" onclick="location='../goods/goods_view?pcode=${gvo.pcode}'" style="cursor:pointer;">
+						<img src="${gvo.img}" width="270" height="350" onclick="location='/papeterie/goods/goods_view?pcode=${gvo.pcode}'" style="cursor:pointer;">
 					</div>
 					<div class="goods-item-contbox">
-						<div class="goods-item-titlebox"><span id="goods-item-title" onclick="location='../goods/goods_view?pcode=${gvo.pcode}'" style="cursor:pointer;">${gvo.title}</span></div>
+						<div class="goods-item-titlebox"><span id="goods-item-title" onclick="location='/papeterie/goods/goods_view?pcode=${gvo.pcode}'" style="cursor:pointer;">${gvo.title}</span></div>
 						<div class="goods-item-pricebox"><strong><fmt:formatNumber value="${gvo.price }"/>원</strong></div>
 					</div>
 				</div>
@@ -118,14 +118,14 @@ $(document).ready(function(){
 				<div class="goods-item">
 					<div class="goods-item-imgbox">
 						<c:if test="${gvo.option == -1}">
-							<div class="imgover_soldout" onclick="location='../goods/goods_view?pcode=${gvo.pcode}'" style="cursor:pointer;">
+							<div class="imgover_soldout" onclick="location='/papeterie/goods/goods_view?pcode=${gvo.pcode}'" style="cursor:pointer;">
 								<div class="imgover_soldout_inner"><strong>Sold Out</strong></div>
 							</div>
 						</c:if>
-						<img src="${gvo.img}" width="270" height="350" onclick="location='../goods/goods_view?pcode=${gvo.pcode}'" style="cursor:pointer;">
+						<img src="${gvo.img}" width="270" height="350" onclick="location='/papeterie/goods/goods_view?pcode=${gvo.pcode}'" style="cursor:pointer;">
 					</div>
 					<div class="goods-item-contbox">
-						<div class="goods-item-titlebox"><span id="goods-item-title" onclick="location='../goods/goods_view?pcode=${gvo.pcode}'" style="cursor:pointer;">${gvo.title}</span></div>
+						<div class="goods-item-titlebox"><span id="goods-item-title" onclick="location='/papeterie/goods/goods_view?pcode=${gvo.pcode}'" style="cursor:pointer;">${gvo.title}</span></div>
 						<div class="goods-item-pricebox"><strong><fmt:formatNumber value="${gvo.price }"/>원</strong></div>
 					</div>
 				</div>
@@ -138,13 +138,13 @@ $(document).ready(function(){
 			<span>선물하기 딱 좋아요!</span>
 		</div>
 		<div class="goods_big_img">
-			<img src="/resources/img/main_goods1.jpg" onclick="location='../goods/goods_view?pcode=p0102'" style="cursor:pointer;">
+			<img src="/papeterie/resources/img/main_goods1.jpg" onclick="location='/papeterie/goods/goods_view?pcode=p0102'" style="cursor:pointer;">
 		<div class="goods_big">
 			<span>2022년이 온다</span>
 			<p>다이어리</p>
 		</div>
 		<div class="goods_big_img">
-			<img src="/resources/img/main_goods2.jpg" onclick="location='../goods/goods_view?pcode=p0107'" style="cursor:pointer;">
+			<img src="/papeterie/resources/img/main_goods2.jpg" onclick="location='/papeterie/goods/goods_view?pcode=p0107'" style="cursor:pointer;">
 		<div class="goods_big">
 			<span>선물이 필요할 땐</span>
 			<p>잘나가요 세트</p>
@@ -162,14 +162,14 @@ $(document).ready(function(){
 				<div class="goods-item">
 					<div class="goods-item-imgbox">
 						<c:if test="${gvo.option == -1}">
-							<div class="imgover_soldout" onclick="location='../goods/goods_view?pcode=${gvo.pcode}'" style="cursor:pointer;">
+							<div class="imgover_soldout" onclick="location='/papeterie/goods/goods_view?pcode=${gvo.pcode}'" style="cursor:pointer;">
 								<div class="imgover_soldout_inner"><strong>Sold Out</strong></div>
 							</div>
 						</c:if>
-						<img src="${gvo.img}" width="270" height="350" onclick="location='../goods/goods_view?pcode=${gvo.pcode}'" style="cursor:pointer;">
+						<img src="${gvo.img}" width="270" height="350" onclick="location='/papeterie/goods/goods_view?pcode=${gvo.pcode}'" style="cursor:pointer;">
 					</div>
 					<div class="goods-item-contbox">
-						<div class="goods-item-titlebox"><span id="goods-item-title" onclick="location='../goods/goods_view?pcode=${gvo.pcode}'" style="cursor:pointer;">${gvo.title}</span></div>
+						<div class="goods-item-titlebox"><span id="goods-item-title" onclick="location='/papeterie/goods/goods_view?pcode=${gvo.pcode}'" style="cursor:pointer;">${gvo.title}</span></div>
 						<div class="goods-item-pricebox"><strong><fmt:formatNumber value="${gvo.price }"/>원</strong></div>
 					</div>
 				</div>

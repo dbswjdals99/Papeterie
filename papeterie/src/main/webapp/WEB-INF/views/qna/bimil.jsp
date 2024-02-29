@@ -10,7 +10,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<link rel="stylesheet" href="/resources/css/qna.css">
+<link rel="stylesheet" href="/papeterie/resources/css/qna.css">
 <script>
 	window.onload = function(){
 		if(<%=fail%>=="1")

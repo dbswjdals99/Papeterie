@@ -29,7 +29,7 @@ public class AdminServiceImpl implements AdminService{
 	@Autowired
 	private AdminMapper mapper;
 	
-	private final String module="/admin/";
+	private final String module="/papeterie/admin/";
 
 	@Override
 	public String manager(Model model) {
@@ -106,9 +106,9 @@ public class AdminServiceImpl implements AdminService{
 	@Override
 	public String product_add_ok(GoodsVO gsvo,HttpServletRequest request, HttpSession session) throws Exception {
 		
-//		String path = request.getRealPath("/resources/img/p01/");
+//		String path = request.getRealPath("/papeterie/resources/img/p01/");
 		ServletContext application = session.getServletContext();
-		String path = application.getRealPath("/resources/img/p01/review/");
+		String path = application.getRealPath("/papeterie/resources/img/p01/review/");
 		int max = 1024 * 1024 * 10;
 		MultipartRequest multi = new MultipartRequest(request, path, max, "utf-8", new DefaultFileRenamePolicy());
 		
@@ -121,8 +121,8 @@ public class AdminServiceImpl implements AdminService{
 		gsvo.setTitle(multi.getParameter("title"));
 		gsvo.setPrice(Integer.parseInt(multi.getParameter("price")));
 		gsvo.setCategory(multi.getParameter("category"));
-		gsvo.setImg("/resources/img/p01/main/"+multi.getFilesystemName("img"));
-		gsvo.setContent("<img class='js-smart-img' src='/resources/img/p01/detail/"+multi.getFilesystemName("content")+"'/>");
+		gsvo.setImg("/papeterie/resources/img/p01/main/"+multi.getFilesystemName("img"));
+		gsvo.setContent("<img class='js-smart-img' src='/papeterie/resources/img/p01/detail/"+multi.getFilesystemName("content")+"'/>");
 		gsvo.setPcode(pcode);
 		
 		mapper.product_add_ok(gsvo);

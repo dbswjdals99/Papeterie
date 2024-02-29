@@ -11,8 +11,8 @@
 <link href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.11/summernote-bs4.css" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.11/summernote-bs4.js"></script>
 <script src=" https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.18/lang/summernote-ko-KR.min.js"></script>
-<link rel="stylesheet" href="/resources/css/gongji.css">
-<script src="/resources/js/gongji.js?var=1"></script>
+<link rel="stylesheet" href="/papeterie/resources/css/gongji.css">
+<script src="/papeterie/resources/js/gongji.js?var=1"></script>
 </head>
 <body>
 

@@ -18,21 +18,21 @@
 	<div id="content-user">
 		<div id="content-userbox">
 			<div id="content-userhead">회원 <span id="content-userhead2">(명)</span></div>
-			<img src="/resources/img/user.png" width="50">
+			<img src="/papeterie/resources/img/user.png" width="50">
 			<div><span id="content-userchk">${userlist}</span></div>
 		</div>
 		<div id="content-userbox">
 			<div id="content-userhead">오늘 가입한 회원 <span id="content-userhead2">(명)</span></div>
-			<img src="/resources/img/user.png" width="50">
+			<img src="/papeterie/resources/img/user.png" width="50">
 			<div><span id="content-userchk">0</span></div>
 		</div>
 		<div id="content-userbox">
 			<div id="content-userhead"> 회원 전체 포인트 <span id="content-userhead2">(P)</span></div>
-			<img src="/resources/img/user.png" width="50">
+			<img src="/papeterie/resources/img/user.png" width="50">
 			<div><span id="content-userchk">${userpoint}</span></div>
 		</div>
 		<div id="content-i">
-			<img src="/resources/img/i.png" width="80">
+			<img src="/papeterie/resources/img/i.png" width="80">
 		<div id="content-i-text">
 			<div>관리자 페이지</div>
 			<div><a href="#">기능 도움말</a></div>

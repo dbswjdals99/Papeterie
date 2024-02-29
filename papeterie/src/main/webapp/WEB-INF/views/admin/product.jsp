@@ -102,7 +102,7 @@ function product_delete(my)
 				<td align="center">${gsvo.pcode}</td>
 				<td align="center" style="padding-top:17px;">${gsvo.regdate}</td>
 				<td align="center">
-					<box-icon class="box" name='link-external' size="md" onclick="location='../goods/goods_view?pcode=${gsvo.pcode}'" style="cursor:pointer;"></box-icon> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<box-icon class="box" name='link-external' size="md" onclick="location='/papeterie/goods/goods_view?pcode=${gsvo.pcode}'" style="cursor:pointer;"></box-icon> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 					<box-icon class="box" type='solid' name='receipt' size="md" onclick="location='product_update?idx=${gsvo.idx}'" style="cursor:pointer;"></box-icon> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 					<box-icon class="box" type='solid' name='trash' size="md" onclick="product_delete(${gsvo.idx})" style="cursor:pointer;"></box-icon>
 				</td>
@@ -111,7 +111,7 @@ function product_delete(my)
         </tbody>
     </table>
 </div>
-<div><input type="button" value="상품 추가" id="product-btn-add" onclick="location='../admin/product_add'"></div>
+<div><input type="button" value="상품 추가" id="product-btn-add" onclick="location='/papeterie/admin/product_add'"></div>
 </div>
 </body>
 </html>

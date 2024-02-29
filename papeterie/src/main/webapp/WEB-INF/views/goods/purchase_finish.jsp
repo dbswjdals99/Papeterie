@@ -7,8 +7,8 @@
 <head>
 <meta charset="UTF-8">
 <title>구매 완료</title>
-<link rel="stylesheet" href="/resources/css/purchase_finish.css">
-<script src="/resources/js/purchase_finish.js"></script>
+<link rel="stylesheet" href="/papeterie/resources/css/purchase_finish.css">
+<script src="/papeterie/resources/js/purchase_finish.js"></script>
 
 </head>
 <body>
@@ -17,7 +17,7 @@
 		<hr>
 	<div id="receipt">
 		<div id="receipt_head">
-			<img src="/resources/img/papeterie.png" id="receipt_logo"/><span>주문/결제 확인서</span>
+			<img src="/papeterie/resources/img/papeterie.png" id="receipt_logo"/><span>주문/결제 확인서</span>
 		</div>
 		<div id="receipt_middle">
 		<div id="product_table">
@@ -73,8 +73,8 @@
 		</div>
 		</div>
 		<div id="receipt_bottom">
-			<a href="../main/index"><div class="bottom_link">메인화면</div></a>
-			<a href="../member/mypage"><div class="bottom_link">마이페이지</div></a>
+			<a href="/papeterie/main/index"><div class="bottom_link">메인화면</div></a>
+			<a href="/papeterie/member/mypage"><div class="bottom_link">마이페이지</div></a>
 		</div>
 	</div>
 	</div>

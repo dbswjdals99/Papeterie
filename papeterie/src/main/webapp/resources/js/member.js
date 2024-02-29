@@ -87,7 +87,7 @@ function del_review(idx) {
 
 function updateopen(idx){
     var frmPop= document.frmPopup;
-    var url = '../review/update';
+    var url = '/papeterie/review/update';
     window.open('','update','width=450, height=800, toolbar=no, menubar=no, resizable=no');  
      
     frmPop.action = url;

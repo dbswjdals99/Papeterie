@@ -89,7 +89,7 @@ public class GoodsController {
 	{
 		if(session.getAttribute("userid") == null)
 		{
-			return "redirect:../member/login";
+			return "redirect:/papeterie/member/login";
 		}
 		else
 		{
@@ -104,7 +104,7 @@ public class GoodsController {
 	{
 		if(session.getAttribute("userid") == null)
 		{
-			return "redirect:../member/login";		
+			return "redirect:/papeterie/member/login";
 		}
 		else
 		{

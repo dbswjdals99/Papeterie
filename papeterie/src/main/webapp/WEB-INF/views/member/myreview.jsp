@@ -6,10 +6,10 @@
 <head>
 <meta charset="UTF-8">
 <title>PAPETERIE - 리뷰</title>
-<link rel="stylesheet" href="/resources/css/style.css">
-<link rel="stylesheet" href="/resources/css/member.css">
-<link rel="stylesheet" href="/resources/css/review.css?var=1">
-<script src="/resources/js/member.js?var=2"></script>
+<link rel="stylesheet" href="/papeterie/resources/css/style.css">
+<link rel="stylesheet" href="/papeterie/resources/css/member.css">
+<link rel="stylesheet" href="/papeterie/resources/css/review.css?var=1">
+<script src="/papeterie/resources/js/member.js?var=2"></script>
 <script>
 </script>
 </head>
@@ -33,7 +33,7 @@
 				</tr>
 				<c:if test="${rlist.size() == 0 }">
 					<tr>
-						<td align="center" colspan="4"><img src="/resources/img/empty.png" width="300"></td>
+						<td align="center" colspan="4"><img src="/papeterie/resources/img/empty.png" width="300"></td>
 					</tr>
 				</c:if>
 				<c:forEach items="${rlist}" var="rvo">
@@ -57,7 +57,7 @@
 						<a href="javascript:;" onclick="updateopen('${rvo.idx}')" style="color:black;">${rvo.content}</a>
 					</td>
 					<td>
-						<a href="javascript:;"><img src="/resources/img/ic_delete.svg" alt="삭제" title="삭제" onclick="del_review('${rvo.idx}')"></a>
+						<a href="javascript:;"><img src="/papeterie/resources/img/ic_delete.svg" alt="삭제" title="삭제" onclick="del_review('${rvo.idx}')"></a>
 					</td>
 				</tr>
 				</c:forEach>

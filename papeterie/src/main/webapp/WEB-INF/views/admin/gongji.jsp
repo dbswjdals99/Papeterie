@@ -21,7 +21,7 @@ function delete_ok(my)
 	}
 	else
 	{
-		location="../gongji/delete?id="+my;
+		location="/papeterie/gongji/delete?id="+my;
 	}
 }
 </script>
@@ -61,8 +61,8 @@ function delete_ok(my)
 				<td align="center">${gvo.readnum}명</td>
 				<td align="center">${gvo.writeday}</td>
 				<td align="center">
-					<box-icon class="box" name='link-external' size="md" onclick="location='../gongji/content?id=${gvo.id}'" style="cursor:pointer;"></box-icon> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-					<box-icon class="box" type='solid' name='receipt' size="md" onclick="location='../gongji/update?id=${gvo.id}'" style="cursor:pointer;"></box-icon> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<box-icon class="box" name='link-external' size="md" onclick="location='/papeterie/gongji/content?id=${gvo.id}'" style="cursor:pointer;"></box-icon> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<box-icon class="box" type='solid' name='receipt' size="md" onclick="location='/papeterie/gongji/update?id=${gvo.id}'" style="cursor:pointer;"></box-icon> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 					<box-icon class="box" type='solid' name='trash' size="md" onclick="delete_ok(${gvo.id})" style="cursor:pointer;"></box-icon>
 				</td>
             </tr>
@@ -70,7 +70,7 @@ function delete_ok(my)
         </tbody>
     </table>
 </div>
-<div><input type="button" value="공지사항 작성" id="content-btn" onclick="location='../gongji/write'"></div>
+<div><input type="button" value="공지사항 작성" id="content-btn" onclick="location='/papeterie/gongji/write'"></div>
 </div>
 </body>
 </html>

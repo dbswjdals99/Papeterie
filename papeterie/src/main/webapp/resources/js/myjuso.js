@@ -15,7 +15,7 @@
 	close();
  }
  function move_address(){
- 	opener.location = "../member/addressbook";
+ 	opener.location = "/papeterie/member/addressbook";
  	close();
  }
  

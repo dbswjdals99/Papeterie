@@ -21,7 +21,7 @@ function qna_delete(my)
 	}
 	else
 	{
-		location="../qna/delete?id="+my;
+		location="/papeterie/qna/delete?id="+my;
 	}
 }
 </script>
@@ -87,15 +87,15 @@ function qna_delete(my)
 				<td>${qvo.writeday}</td>
 				<td>
 					<c:if test="${qvo.dapbun == 0}">
-						<box-icon type='solid' name='comment-x' size="md" onclick="location='../qna/rewrite?id=${qvo.id}&grp=${qvo.grp}&seq=${qvo.seq}&dep=${qvo.dep}&pwd=${qvo.pwd}'" style="cursor:pointer;opacity:0.5; "></box-icon>
+						<box-icon type='solid' name='comment-x' size="md" onclick="location='/papeterie/qna/rewrite?id=${qvo.id}&grp=${qvo.grp}&seq=${qvo.seq}&dep=${qvo.dep}&pwd=${qvo.pwd}'" style="cursor:pointer;opacity:0.5; "></box-icon>
 					</c:if>
 					<c:if test="${qvo.dapbun == 1}">
 						<box-icon name='comment-check' type='solid' size="md"></box-icon>
 					</c:if>
 				</td>
 				<td>
-					<box-icon class="box" name='link-external' size="md" onclick="location='../qna/content?id=${qvo.id}'" style="cursor:pointer;"></box-icon> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-					<box-icon class="box" type='solid' name='receipt' size="md" onclick="location='../qna/update?id=${qvo.id}'" style="cursor:pointer;"></box-icon> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<box-icon class="box" name='link-external' size="md" onclick="location='/papeterie/qna/content?id=${qvo.id}'" style="cursor:pointer;"></box-icon> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<box-icon class="box" type='solid' name='receipt' size="md" onclick="location='/papeterie/qna/update?id=${qvo.id}'" style="cursor:pointer;"></box-icon> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 					<box-icon class="box" type='solid' name='trash' size="md" onclick="qna_delete(${qvo.id})" style="cursor:pointer;"></box-icon>
 				</td>
             </tr>

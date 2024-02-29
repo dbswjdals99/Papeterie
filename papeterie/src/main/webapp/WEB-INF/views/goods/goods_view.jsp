@@ -8,8 +8,8 @@
 <meta charset="UTF-8">
 <title>상품 상세</title>
 <script src="http://code.jquery.com/jquery-latest.js"></script>
-<link rel="stylesheet" href="/resources/css/goods_view.css?var=1">
-<script src="/resources/js/goods_view.js"></script>
+<link rel="stylesheet" href="/papeterie/resources/css/goods_view.css?var=1">
+<script src="/papeterie/resources/js/goods_view.js"></script>
 <script>
 </script>
 </head>
@@ -75,7 +75,7 @@
 					<c:if test="${gvo.option != -1}">
 						<input type="submit" class="goods_buy_button" value="바 로 구 매"><br>
 						<c:if test="${userid == null}">
-						<a href="../member/login" class="goods_sub_button" id="goods_addwish">찜 하 기</a>
+						<a href="/papeterie/member/login" class="goods_sub_button" id="goods_addwish">찜 하 기</a>
 						</c:if>
 						<c:if test="${userid != null}">
 						<a href="javascript:;" class="goods_sub_button" id="goods_addwish" onclick="add_wish_fn('${gvo.pcode}')">찜 하 기</a>
@@ -109,7 +109,7 @@
 					<div class="goods_data_menu_sub" onclick="Goods_Menu_Move(3)">리뷰(후기)</div>
 					<div class="goods_data_menu_sub" onclick="Goods_Menu_Move(4)">문의사항</div>
 				</div>
-				<img src="/resources/img/goods_shipping_notice.png">
+				<img src="/papeterie/resources/img/goods_shipping_notice.png">
 			</div>
 			<div id="goods_refund">
 				<div class="goods_data_menu">
@@ -119,7 +119,7 @@
 					<div class="goods_data_menu_sub" onclick="Goods_Menu_Move(3)">리뷰(후기)</div>
 					<div class="goods_data_menu_sub" onclick="Goods_Menu_Move(4)">문의사항</div>
 				</div>
-				<img src="/resources/img/goods_refund_notice.png">
+				<img src="/papeterie/resources/img/goods_refund_notice.png">
 			</div>
 			<div id="goods_review">
 				<div class="goods_data_menu">

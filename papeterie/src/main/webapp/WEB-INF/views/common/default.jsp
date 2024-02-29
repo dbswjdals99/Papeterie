@@ -8,8 +8,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 <script src="http://code.jquery.com/jquery-latest.js"></script>
-<link rel="stylesheet" href="/resources/css/default.css?var=3">
-<script src="/resources/js/default.js?var=1"></script>
+<link rel="stylesheet" href="/papeterie/resources/css/default.css?var=3">
+<script src="/papeterie/resources/js/default.js?var=1"></script>
 
 <decorator:head />
 </head>
@@ -29,22 +29,22 @@
 		<div class="top_head_first">
 		
 			<!-- 스크롤 내리면 상단의 로고 -->
-			<img src="/resources/img/papeterie.png"  class="top-logo-text3" width="100" style="cursor:pointer;" onclick="location='../main/index'">
+			<img src="/papeterie/resources/img/papeterie.png"  class="top-logo-text3" width="100" style="cursor:pointer;" onclick="location='/papeterie/main/index'">
 			
 			<!-- 로그인이 안되었을때 -->
 			<div class="top-head-menu">
 				<c:if test="${userid == null}">
-					<a class="top_head_first_menu" href="../member/login">로그인</a> <a class="top_head_first_menu2">|</a>
-					<a class="top_head_first_menu" href="../member/signup1">회원가입</a> <a class="top_head_first_menu2">|</a>
-					<a class="top_head_first_menu" href="../member/login">마이페이지</a> <a class="top_head_first_menu2">|</a>
-					<a class="top_head_first_menu" href="../basket/cart">장바구니</a>
+					<a class="top_head_first_menu" href="/papeterie/member/login">로그인</a> <a class="top_head_first_menu2">|</a>
+					<a class="top_head_first_menu" href="/papeterie/member/signup1">회원가입</a> <a class="top_head_first_menu2">|</a>
+					<a class="top_head_first_menu" href="/papeterie/member/login">마이페이지</a> <a class="top_head_first_menu2">|</a>
+					<a class="top_head_first_menu" href="/papeterie/basket/cart">장바구니</a>
 				</c:if>
 				
 				<!-- 로그인이 되었을때 -->
 				<c:if test="${userid != null}">
-					<span class="top_head_first_menu">${uname}님</span> <a class="top_head_first_menu" href="../member/logout">로그아웃</a> <a class="top_head_first_menu2">|</a>
-					<a class="top_head_first_menu" href="../member/mypage">마이페이지</a> <a class="top_head_first_menu2">|</a>
-					<a class="top_head_first_menu" href="../basket/cart">장바구니</a>
+					<span class="top_head_first_menu">${uname}님</span> <a class="top_head_first_menu" href="/papeterie/member/logout">로그아웃</a> <a class="top_head_first_menu2">|</a>
+					<a class="top_head_first_menu" href="/papeterie/member/mypage">마이페이지</a> <a class="top_head_first_menu2">|</a>
+					<a class="top_head_first_menu" href="/papeterie/basket/cart">장바구니</a>
 				</c:if>
 			</div>
 		</div>
@@ -54,7 +54,7 @@
 		
 			<!-- 처음시작시 로고 뜨는부분 -->
 			<div class="top-logo-head">
-				<img src="/resources/img/papeterie.png"  width="200" style="cursor:pointer;" onclick="location='../main/index'">
+				<img src="/papeterie/resources/img/papeterie.png"  width="200" style="cursor:pointer;" onclick="location='/papeterie/main/index'">
 			</div>
 		</div>
 		
@@ -64,10 +64,10 @@
 			<!-- 메뉴 카테고리 -->
 			<ul class="second-menu">
 				<li>
-					<a href="../goods/goods_all">전체</a>
+					<a href="/papeterie/goods/goods_all">전체</a>
 				</li>
 				<li onmouseover="view_sub(0)" onmouseout="hide_sub(0)">
-					<a href="../goods/goods_p01">문구</a>
+					<a href="/papeterie/goods/goods_p01">문구</a>
 					<ul class="sub">
 						<li><a href="#">필기</a></li>
 						<li><a href="#">노트</a></li>
@@ -75,7 +75,7 @@
 					</ul>
 				</li>
 				<li onmouseover="view_sub(1)" onmouseout="hide_sub(1)">
-					<a href="../goods/goods_p02">리빙</a>
+					<a href="/papeterie/goods/goods_p02">리빙</a>
 					<ul class="sub">
 						<li><a href="#">잡지</a></li>
 						<li><a href="#">잡화</a></li>
@@ -111,12 +111,12 @@
 
 <div id="bottom-head">
 	<div id="bottom-content">
-		<div id="bottom-left"><img src="/resources/img/papeterie.png"  width="250" style="cursor:pointer;" onclick="location='../main/index'" id="bottom-img"></div>
+		<div id="bottom-left"><img src="/papeterie/resources/img/papeterie.png"  width="250" style="cursor:pointer;" onclick="location='/papeterie/main/index'" id="bottom-img"></div>
 		<div id="bottom-right">
 			<div id="bottom-first">
-				<a href="../gongji/list">공지사항</a>
-				<a href="../qna/list">질문/답변</a>
-				<a href="../ect/tos">이용약관</a>
+				<a href="/papeterie/gongji/list">공지사항</a>
+				<a href="/papeterie/qna/list">질문/답변</a>
+				<a href="/papeterie/ect/tos">이용약관</a>
 				<a href="#">개인정보처리방침</a>
 				<a href="#">판매처 안내</a>
 			</div>
@@ -127,6 +127,6 @@
 		</div>
 	</div>
 	</div>
-		<a href="#" class="top"><img src="/resources/img/top.png" width="80"></a>
+		<a href="#" class="top"><img src="/papeterie/resources/img/top.png" width="80"></a>
 </body>
 </html>

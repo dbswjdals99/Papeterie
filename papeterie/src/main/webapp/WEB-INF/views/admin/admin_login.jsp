@@ -5,8 +5,8 @@
 <head>
 <meta charset="UTF-8">
 <title>PAPETERIE - 관리자로그인</title>
-<link rel="stylesheet" href="/resources/css/admin.css?var=1">
-<script src="/resources/js/admin.js"></script>
+<link rel="stylesheet" href="/papeterie/resources/css/admin.css?var=1">
+<script src="/papeterie/resources/js/admin.js"></script>
 <style>
 body{
 	margin:0px;
@@ -23,9 +23,9 @@ window.onload = function()
 </head>
 <body>
 	<div id="section2">
-		<div align="center"><img src="/resources/img/papeterie.png" width="300" onclick="location='../main/index'" style="cursor:pointer;"></div>
+		<div align="center"><img src="/papeterie/resources/img/papeterie.png" width="300" onclick="location='/papeterie/main/index'" style="cursor:pointer;"></div>
 		<div id="login-form">
-		<form method="post" action="/admin/admin_login_ok">
+		<form method="post" action="/papeterie/admin/admin_login_ok">
 			<table width="350" align="center">
 				<tr>
 					<td style="border-bottom:1px solid silver;"><span class="login-head" id="div1" onclick="color_chg()">대표운영자</span><span class="login-head" id="div2" onclick="color_chg2()">부운영자</span></td>

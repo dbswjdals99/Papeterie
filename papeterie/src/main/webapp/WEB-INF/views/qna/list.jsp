@@ -7,12 +7,12 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<link rel="stylesheet" href="/resources/css/qna.css">
+<link rel="stylesheet" href="/papeterie/resources/css/qna.css">
 <script>
 function qnalist(){
 	if(confirm("글을 작성하시려면 로그인을 해 주십시오."))
 	{
-		location="../member/login";
+		location="/papeterie/member/login";
 	}
 	else
 	{
@@ -70,7 +70,7 @@ function qnalist(){
 					</c:forEach>
 					<span id="re">RE</span>
 				</c:if>
-				<a href="bimil?id=${qvo.id}" id="bimil-title">${qvo.title}</a>&nbsp;&nbsp;<img src="/resources/img/ico_lock.gif">
+				<a href="bimil?id=${qvo.id}" id="bimil-title">${qvo.title}</a>&nbsp;&nbsp;<img src="/papeterie/resources/img/ico_lock.gif">
 			</td>
 			<td class="list-center">
 				<c:set var="name"       value="${qvo.name}" />

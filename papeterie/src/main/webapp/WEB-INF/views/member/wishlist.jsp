@@ -6,11 +6,11 @@
 <head>
 <meta charset="UTF-8">
 <title>PAPETERIE - 찜목록</title>
-<link rel="stylesheet" href="/resources/css/style.css">
-<link rel="stylesheet" href="/resources/css/member.css">
-<link rel="stylesheet" href="/resources/css/wishlist.css?var=1">
+<link rel="stylesheet" href="/papeterie/resources/css/style.css">
+<link rel="stylesheet" href="/papeterie/resources/css/member.css">
+<link rel="stylesheet" href="/papeterie/resources/css/wishlist.css?var=1">
 <script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
-<script src="/resources/js/member.js"></script>
+<script src="/papeterie/resources/js/member.js"></script>
 <script>
 </script>
 </head>
@@ -30,7 +30,7 @@
 				</tr>
 				<c:if test="${wlist.size() == 0 }">
 					<tr>
-						<td align="center" colspan="4"><img src="/resources/img/empty.png" width="300"></td>
+						<td align="center" colspan="4"><img src="/papeterie/resources/img/empty.png" width="300"></td>
 					</tr>
 				</c:if>
 				<c:forEach items="${wlist}" var="wvo">
@@ -38,12 +38,12 @@
 				<tr>
 					<td align="center">${i}</td>
 					<td>
-						<a href="../goods/goods_view?pcode=${wvo.pcode}" style="color:black;" id="goods-title"><img id="goods_img" src="${wvo.img}"> &nbsp; ${wvo.title}</a>
-						<a href="../goods/goods_view?pcode=${wvo.pcode}" target="_blank"><img src="/resources/img/ic_open_in_new_24px.svg" alt="새창으로 열기" title="새창으로 열기"></a>
+						<a href="/papeterie/goods/goods_view?pcode=${wvo.pcode}" style="color:black;" id="goods-title"><img id="goods_img" src="${wvo.img}"> &nbsp; ${wvo.title}</a>
+						<a href="/papeterie/goods/goods_view?pcode=${wvo.pcode}" target="_blank"><img src="/papeterie/resources/img/ic_open_in_new_24px.svg" alt="새창으로 열기" title="새창으로 열기"></a>
 					</td>
 					<td align="center"><fmt:formatNumber value="${wvo.price}"/> 원</td>
 					<td align="center">
-						<a href="del_wishlist?idx=${wvo.idx}"><img src="/resources/img/ic_delete.svg" alt="삭제" title="삭제"></a>
+						<a href="del_wishlist?idx=${wvo.idx}"><img src="/papeterie/resources/img/ic_delete.svg" alt="삭제" title="삭제"></a>
 					</td>
 				</tr>
 				</c:forEach>

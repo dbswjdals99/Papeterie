@@ -10,9 +10,9 @@
 <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.js"></script> 
 <link href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.11/summernote-bs4.css" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.11/summernote-bs4.js"></script>
-<script src="/resources/js/summernote-ko-KR.js"></script>
-<link rel="stylesheet" href="/resources/css/qna.css">
-<script src="/resources/js/qna.js"></script>
+<script src="/papeterie/resources/js/summernote-ko-KR.js"></script>
+<link rel="stylesheet" href="/papeterie/resources/css/qna.css">
+<script src="/papeterie/resources/js/qna.js"></script>
 </head>
 <body>
 
